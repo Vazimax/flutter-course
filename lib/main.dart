@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() => runApp(MaterialApp(
       home: Home(),
@@ -19,18 +20,20 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[200],
       ),
       body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.end,
+        // mainAxisAlignment: MainAxisAlignment.spaceAround,
+        // crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
-          Text('This is the row'),
-          FloatingActionButton(
-            onPressed: () {},
-            child: Text('Click me habibi'),
+          Expanded(child: Image.asset('assets/image.webp')),
+          Expanded(
+            flex:4,
+            child: Container(
+                padding: EdgeInsets.all(50), child: Text('Just testing')),
           ),
-          Container(
-              color: Colors.blue,
-              padding: EdgeInsets.all(25),
-              child: Text('Inside the container habibi')),
+          Expanded(
+              flex:2,
+              child: Container(
+                  padding: EdgeInsets.all(50), child: Text('Just testing 2'))),
+          Container(padding: EdgeInsets.all(50), child: Text('Just testing 3')),
         ],
       ),
       floatingActionButton: FloatingActionButton(
