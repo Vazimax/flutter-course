@@ -18,12 +18,11 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[200],
       ),
-      body: Center(
-          //child: Image.asset('assets/image.webp'),
-          child: IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.alternate_email),
-              color: Colors.black)),
+      body: Container(
+        color: Colors.grey,
+        padding: EdgeInsets.all(20),
+        child: Text('Teeeest'),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Text('click'),
